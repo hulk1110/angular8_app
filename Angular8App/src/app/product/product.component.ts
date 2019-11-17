@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/product.service';
 
 @Component({
   selector: 'app-product',
@@ -10,34 +11,13 @@ export class ProductComponent implements OnInit {
   products: any;
 
 
-  constructor() {
+  constructor(private productService: ProductService) {
 
-   this.products = [
-    //   {
-    //     id: 4327,
-    //     name: 'watch',
-    //     brand: 'fossil',
-    //     price: 100000,
-    //   }, {
-    //     id: 4328,
-    //     name: 'ac',
-    //     brand: 'LG',
-    //     price: 500000,
-    //   }, {
-    //     id: 4329,
-    //     name: 'Pen',
-    //     brand: 'MOnt Blanc',
-    //     price: 800000,
-    //   }, {
-    //     id: 4330,
-    //     name: 'bed',
-    //     brand: 'Wakefit',
-    //     price: 1000000,
-    //   }
-    ];
+ 
   }
 
   ngOnInit() {
+      this.products = this.productService.getProduct();
   }
 
 }

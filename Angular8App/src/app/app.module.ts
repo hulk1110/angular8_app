@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MycomponentComponent } from './mycomponent/mycomponent.component';
 import { UserComponent } from './user/user.component';
 import { ProductComponent } from './product/product.component';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { ProductComponent } from './product/product.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

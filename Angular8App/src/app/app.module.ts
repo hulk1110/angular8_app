@@ -7,12 +7,14 @@ import { UserComponent } from './user/user.component';
 import { ProductComponent } from './product/product.component';
 import { ProductService } from './product.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TodoComponent } from './todo/todo.component';
 @NgModule({
   declarations: [
     AppComponent,
     MycomponentComponent,
     UserComponent,
-    ProductComponent
+    ProductComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

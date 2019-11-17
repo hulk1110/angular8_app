@@ -1,0 +1,32 @@
+<p>todo Details!</p>
+
+<div class="container">
+    <h2>ToDo List</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Status</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todo of todos">
+                <td>{{todo.id}}</td>
+                <td>{{todo.title}}</td>
+                <td>
+                    <div [ngSwitch]="todo.completed">
+                        <span *ngSwitchCase="false">Yet To Start</span>
+                        <span *ngSwitchCase="true">Completed</span>
+                        <span *ngSwitchDafault>Create a todo</span>
+                    </div>
+                </td>
+
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>

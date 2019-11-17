@@ -6,7 +6,7 @@ import { MycomponentComponent } from './mycomponent/mycomponent.component';
 import { UserComponent } from './user/user.component';
 import { ProductComponent } from './product/product.component';
 import { ProductService } from './product.service';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +16,8 @@ import { ProductService } from './product.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

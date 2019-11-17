@@ -11,11 +11,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor = "let user of users">
         <td>{{user.id}}</td>
         <td>{{user.name}}</td>
         <td>{{user.email}}</td>
-        <td>{{user.mobile}}</td>
+        <td>{{user.phone}}</td>
       </tr>
       
     </tbody>

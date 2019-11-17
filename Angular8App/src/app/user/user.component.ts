@@ -1,21 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { user } from './user';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  users: any;
 
-  user: user = {
-    id: 1110,
-    name: 'Nishant',
-    email: 'nishant.monty@gmail.com',
-    mobile : 9632777681,
-  };
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    const resp = this.http.get('https://jsonplaceholder.typicode.com/users');
+    resp.subscribe((data) => this.users = data);
   }
 
 }

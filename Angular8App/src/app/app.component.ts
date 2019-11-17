@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'My First Angular 8 ';
   message: any = 'hello From Nishant';
+  money = 1000;
 }
